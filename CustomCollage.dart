@@ -114,16 +114,16 @@ Widget showImage() {
           snapshot.data != null && pages==1) {
           return Image.file(
             snapshot.data,
-            width: 180,
-            height: 180,
+            width: 200,
+            height: 200,
           );
 
       }else if(snapshot.connectionState == ConnectionState.done &&
           snapshot.data != null && pages!=1){
         return Image.file(
           snapshot.data,
-          width: 120,
-          height: 120,
+          width: 150,
+          height: 150,
         );
     } else if (snapshot.error != null) {
         return const Text(
@@ -278,7 +278,7 @@ var align;
                   ),
                 ]),
                 new Column(children: [
-                  SizedBox(width: 400, child: TextField(
+                  SizedBox(width: 250, child: TextField(
                     keyboardType: TextInputType.multiline,
                     maxLines: null,
                     controller: eCtrl,
@@ -292,7 +292,8 @@ var align;
                     },
                   ),
                   ),
-                ]),]);
+                ]),
+              ]);
           break;
         case 3:
           return Column(
