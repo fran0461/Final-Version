@@ -546,6 +546,28 @@ var align;
                 ),
               )
           ),
+          Padding(
+                  padding: EdgeInsets.only(right: 20.0),
+                  child: GestureDetector(
+                    onTap: ()  async{
+                        await PrintPDF();
+                    },
+                    child: Icon(
+                        Icons.print
+                    ),
+                  )
+              ),
+              Padding(
+                  padding: EdgeInsets.only(right: 20.0),
+                  child: GestureDetector(
+                    onTap: () async {
+                      await SavingPDF();
+                    },
+                    child: Icon(
+                        Icons.save
+                    ),
+                  )
+              ),
         ],),
         body: Center(child:
             formats(formatSelected)
